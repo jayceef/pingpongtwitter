@@ -1,0 +1,51 @@
+* {
+  border: 1px solid black;
+}
+body{
+  background-color: lightblue;
+}
+
+.login_register {
+  width: 340px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 3px dashed blue;
+}
+
+/*======================login========================*/
+  #login_container {
+    visibility: visible;
+    text-align: center;
+    padding: 5px;
+    width: 300px;
+    height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 3px dashed green;
+  }
+  #login {
+    margin-top: 200px;
+    padding: 5px;
+    border: 3px dashed red;
+  }
+  #register_button {
+    padding: 5px;
+    border: 3px dashed tan;
+  }
+  #login, #register_button {
+    /*visibility: hidden;*/
+  }
+/*===================================================*/
+
+/*======================register========================*/
+#register{
+  margin-top: -180px;
+    padding: 5px;
+    border: 3px dashed red;
+}
+
+#register{
+  visibility: hidden;
+}
+
+
