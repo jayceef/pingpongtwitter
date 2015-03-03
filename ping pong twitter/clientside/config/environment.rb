@@ -1,5 +1,6 @@
 # Set up gems listed in the Gemfile.
 # See: http://gembundler.com/bundler_setup.html
+
 #      http://stackoverflow.com/questions/7243486/why-do-you-need-require-bundler-setup
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
 
@@ -35,11 +36,32 @@ configure do
 
   # Set the views to
   set :views, File.join(Sinatra::Application.root, "app", "views")
+
+
+  set :allow_origin, :any
+  set :allow_mehtods, [:get, :post, :options]
+  set :allow_credentials, true
+  set :max_age, "1728000"
+  set :expose_headers, ['Content-Type']
+
 end
 
 # Set up the controllers and helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
+
+
+
+
+
+# def cors_set_access_control_headers
+#   headers['Access-Control-Allow-Origin'] = '*'
+#   headers['Access-Control-Allow-Methods'] = 'POST, GET, PUT, DELETE, OPTIONS'
+#   headers['Access-Control-Allow-Headers'] = 'Origin, Content-Type, Accept, Authorization, Token'
+#   headers['Access-Control-Max-Age'] = "1728000"
+# end
+
+# cors_set_access_control_headers
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
