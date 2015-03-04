@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root 'user#index'
+
+  post 'user/login' => 'user#find'
 
   resources :user
   # The priority is based upon order of creation: first created -> highest priority.

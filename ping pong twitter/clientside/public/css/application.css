@@ -48,4 +48,75 @@ body{
   /*visibility: hidden;*/
 }
 
+/*=======================mainpage==========================*/
+
+#main_page{
+ border: 2px solid red;
+ height: 650px;
+}
+/* top of page */
+.top_bar{
+  border: 3px dashed green;
+  height: 10%;
+}
+#right_name_bar{
+  border: 3px dashed orange;
+  width: 25%;
+  float: left;
+  height: 90%;
+}
+#main_logo{
+  text-align: center;
+  border: 3px solid yellow;
+  width: 50%;
+  height: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+#search_bar{
+  position: relative;
+  border: 3px dashed blue;
+  width: 25%;
+  height: 90%;
+  float: right;
+  top: -100%;
+}
+/*==============*/
+
+/*left of page*/
+.left_side{
+  border: 3px solid navy;
+  height: 490px;
+  width: 25%;
+  float: left;
+}
+#friends{
+  border: 3px dashed red;
+  width: 80%;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 25px;
+}
+/*=============*/
+
+/*center of page*/
+.center{
+  border: 3px dashed tan;
+  height: 490px;
+  width: 49%;
+  margin-right: auto;
+  margin-left: auto;
+}
+#ping{
+  border: 2px solid maroon;
+  height: 70px;
+  margin-top: 2%;
+  text-align: center;
+}
+#main_magic{
+  border: 3px solid silver;
+  height: 80%;
+}
+/*===============*/
 

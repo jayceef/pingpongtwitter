@@ -8,7 +8,7 @@ class UserController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find(params[:email])
   end
 
   def new
@@ -19,11 +19,13 @@ class UserController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def find
+    @user = User.find_by(email: params[:email])
+    p @user
+  end
+
   def create
-    p "*" * 50
-    p params
-    p "*" * 50
-    @user = User.new(first_name: params[:first_name])
+    @user = User.new(first_name: params[:first_name], last_name: params[:last_name], user_name: params[:user_name], email: params[:email], hashed_password: params[:hashed_password])
 
     if @user.save
       redirect_to @user
